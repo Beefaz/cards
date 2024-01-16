@@ -36,7 +36,7 @@ main {
 .card {
     width: 200px;
     height: 400px;
-    background-color: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,9 +48,6 @@ main {
     position: relative;
     bottom: 0;
     left: 0;
-    transition: box-shadow 0.5s ease-out,
-    bottom 0.5s ease-out,
-    left 0.5s ease-out;
 }
 
 .image-container {
@@ -78,9 +75,24 @@ main {
     left: 10px;
     bottom: 10px;
     box-shadow: 0 0 5px -1px black, -23px 27px 28px -18px black;
+}
+
+/*main card animation*/
+.card, .card:hover {
     transition: box-shadow 0.5s ease-out,
     bottom 0.5s ease-out,
-    left 0.5s ease-out;
+    left 0.5s ease-out,
+    background 0.5s ease-out,
+    border 0.5s ease-out;
+}
+
+/*other animations*/
+.card .image-container,
+.card:hover .image-container,
+.card .svg-wrapper,
+.card:hover .svg-wrapper {
+    transition: background 0.5s ease-out,
+    border 0.5s ease-out;
 }
 
 /*yellow*/
@@ -90,11 +102,11 @@ main {
 
 .card.yellow .image-container {
     border: 3px solid var(--color-yellow);
-    background-color: var(--color-white);
+    background: var(--color-white);
 }
 
 .card:hover.yellow .image-container {
-    background-color: var(--color-white);
+    background: var(--color-white);
     border: 3px solid transparent;
 }
 
@@ -105,7 +117,7 @@ main {
 
 .card:hover.yellow .svg-wrapper {
     border: 5px solid var(--color-yellow);
-    background-color: var(--color-white);
+    background: var(--color-white);
 }
 
 /*green*/
@@ -115,11 +127,11 @@ main {
 
 .card.green .image-container {
     border: 3px solid var(--color-green);
-    background-color: var(--color-white);
+    background: var(--color-white);
 }
 
 .card:hover.green .image-container {
-    background-color: var(--color-white);
+    background: var(--color-white);
     border: 3px solid transparent;
 }
 
@@ -130,7 +142,7 @@ main {
 
 .card:hover.green .svg-wrapper {
     border: 5px solid var(--color-green);
-    background-color: var(--color-white);
+    background: var(--color-white);
 }
 
 
@@ -141,11 +153,11 @@ main {
 
 .card.purple .image-container {
     border: 3px solid var(--color-purple);
-    background-color: var(--color-white);
+    background: var(--color-white);
 }
 
 .card:hover.purple .image-container {
-    background-color: var(--color-white);
+    background: var(--color-white);
     border: 3px solid transparent;
 }
 
@@ -156,7 +168,7 @@ main {
 
 .card:hover.purple .svg-wrapper {
     border: 5px solid var(--color-purple);
-    background-color: var(--color-white);
+    background: var(--color-white);
 }
 
 /*blue*/
@@ -166,11 +178,11 @@ main {
 
 .card.blue .image-container {
     border: 3px solid var(--color-blue);
-    background-color: var(--color-white);
+    background: var(--color-white);
 }
 
 .card:hover.blue .image-container {
-    background-color: var(--color-white);
+    background: var(--color-white);
     border: 3px solid transparent;
 }
 
@@ -181,5 +193,5 @@ main {
 
 .card:hover.blue .svg-wrapper {
     border: 5px solid var(--color-blue);
-    background-color: var(--color-white);
+    background: var(--color-white);
 }
