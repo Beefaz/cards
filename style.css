@@ -3,7 +3,10 @@
     --color-green: rgba(184, 249, 211, 1);
     --color-purple: rgba(206, 178, 252, 1);
     --color-blue: rgba(220, 233, 255, 1);
-    --color-white: rgba(255, 255, 255, 1);
+    --color-white: rgba(255, 255, 255, 0.5);
+    font-family: "Open Sans", serif;
+    color: rgba(150, 150, 150, 1);
+    font-weight: bold;
 }
 
 
@@ -27,7 +30,6 @@ main {
     align-items: center;
     flex-wrap: wrap;
     gap: 50px;
-    font-family: "Open Sans", serif;
 }
 
 /*global card*/
@@ -39,6 +41,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     border: 1px solid transparent;
     border-radius: 0 15px 0 0;
     box-shadow: 0 0 2px -1px black;
@@ -53,13 +56,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*border-radius: 50%;*/
+    border-radius: 50%;
 }
 
 .card .svg-wrapper {
     width: 100%;
     height: 100%;
-    /*border-radius: 50%;*/
+    border-radius: 50%;
     padding: 20px;
 }
 
@@ -67,14 +70,16 @@ main {
     width: 100%;
     height: 100%;
 }
+
 .card:hover {
     left: 10px;
     bottom: 10px;
     box-shadow: 0 0 5px -1px black, -23px 27px 28px -18px black;
     transition: box-shadow 0.5s ease-out,
-                bottom 0.5s ease-out,
-                left 0.5s ease-out;
+    bottom 0.5s ease-out,
+    left 0.5s ease-out;
 }
+
 /*yellow*/
 .card:hover.yellow {
     background: var(--color-yellow);
